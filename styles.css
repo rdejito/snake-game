@@ -1,22 +1,106 @@
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
 #gameContainer {
-  text-align: center;
+    text-align: center;
 }
 
 #gameBoard {
-  border: 3px solid;
+    border: 4px solid black;
+    background-color: white;
 }
 
 #scoreText {
-  font-family: Courier, cursive;
-  font-size: 100px;
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 15px 0;
 }
 
-#resetBtn {
-  font-family: Courier, cursive;
-  font-size: 22px;
-  width: 100px;
-  height: 50px;
-  border: 4px solid;
-  border-radius: 15px;
-  cursor: pointer;
+#resetBtn, #pauseBtn {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background-color: black;
+    color: white;
+
+    transition: 0.2s;
+}
+
+
+#resetBtn:hover,
+#pauseBtn:hover
+{
+    transform: scale(1.05);
+}
+
+#controls {
+    margin-top: 25px;
+    text-align: center;
+}
+
+#controls div {
+    display: flex;
+    justify-content: center;
+}
+
+#controls button {
+    width: 75px;
+    height: 75px;
+
+    margin: 5px;
+
+    font-size: 2rem;
+
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    background-color: #222;
+    color: white;
+
+    transition: 0.2s;
+}
+
+#controls button:hover {
+    transform: scale(1.05);
+}
+
+#controls button:active {
+    transform: scale(0.95);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    #gameBoard {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    #scoreText {
+        font-size: 3rem;
+    }
+
+    #controls button {
+        width: 65px;
+        height: 65px;
+        font-size: 1.8rem;
+    }
 }
